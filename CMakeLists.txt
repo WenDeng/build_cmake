@@ -1,8 +1,8 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
-project(hello_cmake)
+project(build_cmake)
 
 IF(NOT CMAKE_BUILD_TYPE)
-   SET(CMAKE_BUILD_TYPE Release) #设置为release版本，无调试信息
+   SET(CMAKE_BUILD_TYPE Debug) #设置为release版本，无调试信息
 ENDIF()
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
