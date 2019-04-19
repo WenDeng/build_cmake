@@ -12,15 +12,15 @@ class Solution {
 public:
     static bool compare(int a,int b)
     {
-        string str_ab=to_string(a)+to_string(b);
-        string str_ba=to_string(b)+to_string(a);
+        string str_ab=to_string(a)+to_string(b);//这个函数是新知识点 atoi,itoa也可以了解一下
+        string str_ba=to_string(b)+to_string(a);//string类的+操作
         return str_ab<str_ba;
     }
     string PrintMinNumber(vector<int> numbers) {
         string res;
         int len=numbers.size();
         sort(numbers.begin(),numbers.end(),compare);//谓词-static
-        for(auto foo: numbers) res+=to_string(foo);
+        for(auto foo: numbers) res+=to_string(foo); //合成一个字符串
         return res;
     }
 };
